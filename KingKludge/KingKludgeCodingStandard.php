@@ -11,7 +11,7 @@
  */
 
 if (class_exists('PHP_CodeSniffer_Standards_CodingStandard', true) === false) {
-    throw new PHP_CodeSniffer_Exception(                     'Class PHP_CodeSniffer_Standards_CodingStandard not found'                                       );
+    throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_Standards_CodingStandard not found');
 }
 
 /**
@@ -21,7 +21,8 @@ if (class_exists('PHP_CodeSniffer_Standards_CodingStandard', true) === false) {
  * @package   PHP_CodeSniffer_Yahoo
  * @author    Andy 'Bob' Brockhurst <andy@brockhurst.com>
  */
-class PHP_CodeSniffer_Standards_KingKludge_KingKludgeCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
+class PHP_CodeSniffer_Standards_KingKludge_KingKludgeCodingStandard
+extends PHP_CodeSniffer_Standards_CodingStandard
 {
     /**
      * Return a list of external sniffs to include with this standard.
