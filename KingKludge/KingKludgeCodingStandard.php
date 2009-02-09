@@ -33,7 +33,10 @@ extends PHP_CodeSniffer_Standards_CodingStandard
      */
     public function getIncludedSniffs()
     {
-        return array();
+        return array(
+                     'Squiz',
+                     'Generic/Sniffs/Functions/OpeningFunctionBraceKernighanRitchieSniff.php',
+                    );
 
     }//end getIncludedSniffs()
 
@@ -46,7 +49,10 @@ extends PHP_CodeSniffer_Standards_CodingStandard
      */
     public function getExcludedSniffs()
     {
-        return array();
+        return array(
+                     'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
+                     'Zend/Sniffs/Debug/CodeAnalyzerSniff.php',
+                    );
 
     }//end getExcludedSniffs()
 }
