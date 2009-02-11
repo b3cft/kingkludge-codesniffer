@@ -1,0 +1,90 @@
+Processing foo.php 
+	*** START BRACKET MAP ***
+	=> Found curly bracket opener at 12
+	=> Found curly bracket closer at 21 for 12
+	*** END BRACKET MAP ***
+	*** START SCOPE MAP ***
+	Start scope map at 3: T_FUNCTION => function
+	Process token 4 []: T_WHITESPACE =>  
+	Process token 5 []: T_STRING => DoSomething
+	Process token 6 []: T_OPEN_PARENTHESIS => (
+	* skipping parenthesis *
+	Process token 11 []: T_WHITESPACE =>  
+	Process token 12 []: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 3 (T_FUNCTION)
+	Process token 13 [opener:12;]: T_WHITESPACE => \n
+	Process token 14 [opener:12;]: T_WHITESPACE =>     
+	Process token 15 [opener:12;]: T_STRING => print_r
+	Process token 16 [opener:12;]: T_OPEN_PARENTHESIS => (
+	Process token 17 [opener:12;]: T_VARIABLE => $foo
+	Process token 18 [opener:12;]: T_CLOSE_PARENTHESIS => )
+	Process token 19 [opener:12;]: T_SEMICOLON => ;
+	Process token 20 [opener:12;]: T_WHITESPACE => \n
+	Process token 21 [opener:12;]: T_CLOSE_CURLY_BRACKET => }
+	=> Found scope closer for 3 (T_FUNCTION)
+	*** END SCOPE MAP ***
+	*** START LEVEL MAP ***
+	Process token 0 on line 1 [lvl:0;]: T_INLINE_HTML => \n
+	Process token 1 on line 2 [lvl:0;]: T_OPEN_TAG => <?php\n
+	Process token 2 on line 3 [lvl:0;]: T_WHITESPACE => \n
+	Process token 3 on line 4 [lvl:0;]: T_FUNCTION => function
+	Process token 4 on line 4 [lvl:0;]: T_WHITESPACE =>  
+	Process token 5 on line 4 [lvl:0;]: T_STRING => DoSomething
+	Process token 6 on line 4 [lvl:0;]: T_OPEN_PARENTHESIS => (
+	Process token 7 on line 4 [lvl:0;]: T_ARRAY_HINT => array
+	Process token 8 on line 4 [lvl:0;]: T_WHITESPACE =>  
+	Process token 9 on line 4 [lvl:0;]: T_VARIABLE => $foo
+	Process token 10 on line 4 [lvl:0;]: T_CLOSE_PARENTHESIS => )
+	Process token 11 on line 4 [lvl:0;]: T_WHITESPACE =>  
+	Process token 12 on line 4 [lvl:0;]: T_OPEN_CURLY_BRACKET => {
+	=> Found scope opener for 3 (T_FUNCTION)
+		* level increased *
+		* token 3 (T_FUNCTION) added to conditions array *
+		Process token 13 on line 4 [lvl:1;conds;T_FUNCTION;]: T_WHITESPACE => \n
+		Process token 14 on line 5 [lvl:1;conds;T_FUNCTION;]: T_WHITESPACE =>     
+		Process token 15 on line 5 [lvl:1;conds;T_FUNCTION;]: T_STRING => print_r
+		Process token 16 on line 5 [lvl:1;conds;T_FUNCTION;]: T_OPEN_PARENTHESIS => (
+		Process token 17 on line 5 [lvl:1;conds;T_FUNCTION;]: T_VARIABLE => $foo
+		Process token 18 on line 5 [lvl:1;conds;T_FUNCTION;]: T_CLOSE_PARENTHESIS => )
+		Process token 19 on line 5 [lvl:1;conds;T_FUNCTION;]: T_SEMICOLON => ;
+		Process token 20 on line 5 [lvl:1;conds;T_FUNCTION;]: T_WHITESPACE => \n
+		Process token 21 on line 6 [lvl:1;conds;T_FUNCTION;]: T_CLOSE_CURLY_BRACKET => }
+		=> Found scope closer for 12 (T_OPEN_CURLY_BRACKET)
+		* token T_FUNCTION removed from conditions array *
+		* level decreased *
+	Process token 22 on line 6 [lvl:0;]: T_WHITESPACE => \n
+	Process token 23 on line 7 [lvl:0;]: T_WHITESPACE => \n
+	Process token 24 on line 8 [lvl:0;]: T_CLOSE_TAG => ?>
+	Process token 25 on line 8 [lvl:0;]: T_INLINE_HTML =>   \n
+	Process token 26 on line 9 [lvl:0;]: T_INLINE_HTML => \n
+	*** END LEVEL MAP ***
+[27 tokens in 9 lines]... 
+	*** START TOKEN PROCESSING ***
+		Process token 0: T_INLINE_HTML => \n
+		Process token 1: T_OPEN_TAG => <?php\n
+		Process token 2: T_WHITESPACE => \n
+		Process token 3: T_FUNCTION => function
+		Process token 4: T_WHITESPACE =>  
+		Process token 5: T_STRING => DoSomething
+		Process token 6: T_OPEN_PARENTHESIS => (
+		Process token 7: T_ARRAY_HINT => array
+		Process token 8: T_WHITESPACE =>  
+		Process token 9: T_VARIABLE => $foo
+		Process token 10: T_CLOSE_PARENTHESIS => )
+		Process token 11: T_WHITESPACE =>  
+		Process token 12: T_OPEN_CURLY_BRACKET => {
+		Process token 13: T_WHITESPACE => \n
+		Process token 14: T_WHITESPACE =>     
+		Process token 15: T_STRING => print_r
+		Process token 16: T_OPEN_PARENTHESIS => (
+		Process token 17: T_VARIABLE => $foo
+		Process token 18: T_CLOSE_PARENTHESIS => )
+		Process token 19: T_SEMICOLON => ;
+		Process token 20: T_WHITESPACE => \n
+		Process token 21: T_CLOSE_CURLY_BRACKET => }
+		Process token 22: T_WHITESPACE => \n
+		Process token 23: T_WHITESPACE => \n
+		Process token 24: T_CLOSE_TAG => ?>
+		Process token 25: T_INLINE_HTML =>   \n
+		Process token 26: T_INLINE_HTML => \n
+	*** END TOKEN PROCESSING ***
