@@ -34,5 +34,14 @@ class KingKludge_Sniffs_PHP_NoExtraneousWhiteSpaceSniff implements PHP_CodeSniff
 
     public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
+        /* get all of our tokens */
+        $tokens = $phpcsFile->getTokens();
+
+        if ($tokens[$stackPtr]['code'] === T_OPEN_TAG) {
+            /* if this is the first token we are at the beginning of the file */
+            if (0 === $stackPtr) {
+                return;
+            }
+        }
     }
 }
