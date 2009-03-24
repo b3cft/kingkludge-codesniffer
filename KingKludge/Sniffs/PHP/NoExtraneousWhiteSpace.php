@@ -37,11 +37,23 @@ class KingKludge_Sniffs_PHP_NoExtraneousWhiteSpaceSniff implements PHP_CodeSniff
         /* get all of our tokens */
         $tokens = $phpcsFile->getTokens();
 
-        if ($tokens[$stackPtr]['code'] === T_OPEN_TAG) {
+        if (T_OPEN_TAG === $tokens[$stackPtr]['code']) {
             /* if this is the first token we are at the beginning of the file */
             if (0 === $stackPtr) {
                 return;
             }
+        }
+        elseif (T_CLOSE_TAG === $tokens[$stackPtr]['code'])
+        {
+        	$content = $tokens[$stackPtr]['content'];
+        	if (
+        	    false === isset($tokens[($stackPtr + 1)]) &&
+        	    trim($content) === $content
+        	   )
+        	{
+        		/* There is no next token in the file and the token content had no extra whitespace */
+        		return;
+        	}
         }
     }
 }
